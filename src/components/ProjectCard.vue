@@ -34,11 +34,11 @@
             <!-- non metto le immagini giusto perché ne ho solo 1 sul db -->
           <div class="card-body">
             <h5 class="card-title">{{ projInfo.name }}</h5>
-            <div>Tipo: {{ projInfo.type ? projInfo.type : "---" }}</div>
+            <div>Tipo: {{ projInfo.type ? projInfo.type.name : "---" }}</div>
             <div class="owl" v-if="projInfo.technologies">
                 <span class="badge rounded-pill bg-primary" v-for="tech in projInfo.technologies">{{ tech.name }}</span>
             </div>
-            <p class="card-text">{{ truncSummary(projInfo.summary) }}...</p>
+            <p class="card-text" v-if="projInfo.summary">{{ truncSummary(projInfo.summary) }}...</p>
             <a href="#" class="btn btn-primary">Vedi i dettagli</a>
           </div>
         </div>
