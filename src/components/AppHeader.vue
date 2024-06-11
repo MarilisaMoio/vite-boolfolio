@@ -7,8 +7,8 @@
 <template>
     <header class="d-flex justify-content-center py-3">
       <ul class="nav nav-pills">
-        <li class="nav-item"><route-link :to="home" class="nav-link">Home</route-link></li>
-        <li class="nav-item"><route-link :to="projects" class="nav-link">Projects</route-link></li>
+        <li class="nav-item"><router-link :to="{ name: 'home' }" class="nav-link">Home</router-link></li>
+        <li class="nav-item"><router-link :to="{ name: 'projects' }" class="nav-link">Projects</router-link></li>
       </ul>
     </header>
 </template>
