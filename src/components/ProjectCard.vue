@@ -20,8 +20,6 @@
 
                 let trunSum = summary.substr(0, truncPoint);
 
-                console.log(this.projInfo)
-
                 return trunSum;
             }
         }
@@ -41,7 +39,7 @@
                 <p class="card-text" v-if="projInfo.summary">{{ projInfo.summary.length > 100 ? truncSummary(projInfo.summary) + '...' : projInfo.summary }}</p>
             </div>
             <div class="card-footer">
-                <a class="btn btn-primary">Vedi i dettagli</a>
+                <router-link class="btn btn-primary" :to="{ name: 'single-project', params: { slug: projInfo.slug } }">Vedi i dettagli</router-link>
             </div>
         </div>
     </div>
