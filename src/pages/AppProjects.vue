@@ -14,7 +14,7 @@
                 currentPage: 1,
                 isTherePrev: null,
                 isThereNext: null,
-            }
+            };
         },
         methods: {
             getProjectsFromApi(currentPage){
@@ -63,5 +63,11 @@
 </template>
 
 <style scoped lang="scss">
+
+    ul.pagination{
+        > *:not(.disabled){
+            cursor: pointer;
+        }
+    }
 
 </style>
